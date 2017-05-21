@@ -5,9 +5,9 @@ import socket
 import ctypes
 
 if sys.platform == 'darwin':
-    import bsd_ifreqioctls as ioctls
+    from . import bsd_ifreqioctls as ioctls
 else:
-    import linux_ifreqioctls as ioctls
+    from . import linux_ifreqioctls as ioctls
 
 # Buffer constants
 IFNAMESIZE = 16
